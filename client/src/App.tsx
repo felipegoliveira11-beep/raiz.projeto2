@@ -7,6 +7,7 @@ import FloatingButton from "./components/FloatingButton";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Roteiro from "./pages/Roteiro";
+import Detalhes from "./pages/Detalhes";
 import { Galeria } from "./Hearder";
 
 
@@ -16,6 +17,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/galeria"} component={Galeria} />
       <Route path={"/roteiro"} component={Roteiro} />
+      <Route path={"/detalhes/:id"} component={Detalhes} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

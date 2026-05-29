@@ -9,7 +9,7 @@ import { Link } from "wouter";
  *
  * Design Philosophy: Modernismo Orgânico com Tipografia Assertiva
  * - Paleta personalizada: Verde oliva apagado (#797d42) e Off white (#F2EDE0)
- * - Tipografia em contraste: Playfair Display (display) + Inter (body)
+ * - Tipografia em contraste: Art Nuvo (display) + Inter (body)
  * - Layout assimétrico com diagonal cuts para movimento visual
  * - Foco em Jalapão e Serras Gerais no Tocantins
  */
@@ -207,9 +207,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
-                Explorar Detalhes <ChevronRight className="w-4 h-4" />
-              </Button>
+              <Link href={`/detalhes/${destinations[activeDestination].id}`} className="inline-block">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
+                  Explorar Detalhes <ChevronRight className="w-4 h-4" />
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -283,9 +285,11 @@ export default function Home() {
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
             Entre em contato conosco para consultar sobre expedições personalizadas, datas disponíveis e valores especiais para Jalapão e Serras Gerais.
           </p>
-          <Button size="lg" className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary gap-2">
-            Fale conosco <ArrowRight className="w-4 h-4" />
-          </Button>
+          <a href="https://wa.me/5511926493672?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20as%20expedi%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary gap-2">
+              Fale conosco <ArrowRight className="w-4 h-4" />
+            </Button>
+          </a>
         </div>
       </section>
 
