@@ -4,6 +4,39 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomSlow {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+.animate-zoom-slow {
+  animation: zoomSlow 20s ease-out both;
+}
+
+.hero-paragraph {
+  line-height: 1.9;
+  text-align: justify;
+}
+
 @theme inline {
   --font-sans: "Inter", sans-serif;
   --font-display: "Art Nuvo", serif;

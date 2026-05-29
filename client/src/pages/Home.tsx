@@ -103,7 +103,6 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#destinos" className="text-sm hover:text-primary transition-colors">Destinos</a>
-            <a href="#servicos" className="text-sm hover:text-primary transition-colors">Serviços</a>
             <Link href="/galeria" className="text-sm hover:text-primary transition-colors">Galeria</Link>
             <Link href="/roteiro" className="text-sm hover:text-primary transition-colors">Roteiro</Link>
             <a href="#contato" className="text-sm hover:text-primary transition-colors">Contato</a>
@@ -121,37 +120,37 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 min-h-[600px] md:min-h-[700px]">
           {/* Text Content - Left Side */}
           <div className="flex flex-col justify-center px-6 md:px-12 py-12 md:py-0 bg-gradient-to-br from-background to-background/50">
-            <div className="max-w-md">
+            <div className="max-w-xl animate-fade-up">
               <div className="inline-block mb-4 px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
                 <span className="text-sm font-medium text-primary">Tocantins Selvagem</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
-                Quem Somos
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight tracking-tight">
+                Viva o Jalapão e as Serras Gerais
               </h1>
-              <p className="text-lg text-foreground/70 mb-8 leading-relaxed text-justify">
-               A RAIZ VIVA EXPEDIÇÕES nasceu da conexão verdadeira com o Cerrado, suas águas cristalinas, paisagens vivas, cultura e tradições. Mais do que viagens, criamos experiências autênticas que unem natureza, aventura e pertencimento, sempre guiadas pelo ecoturismo técnico e pelo respeito às comunidades locais.
-                Cada expedição é um convite para viver de forma intensa, descobrir novos olhares e criar conexões que vão além do caminho. Entre fervedouros, dunas e rios de beleza única, surgem histórias, memórias e até aqueles “melhores amigos que ainda não se conheciam”.
-                Viajar com a RAIZ VIVA é mergulhar na essência do Tocantins e levar consigo experiências inesquecíveis, conexões verdadeiras e o encanto de uma terra extraordinária.
+              <p className="hero-paragraph text-lg text-foreground/80 mb-4">
+                O Jalapão e a Serra Gerais são destinos que encantam pela beleza natural e pela diversidade de paisagens presentes no coração do cerrado brasileiro. Com rios de águas cristalinas, cachoeiras exuberantes, dunas douradas e formações rochosas impressionantes, a região proporciona experiências únicas para quem busca aventura, tranquilidade e conexão com a natureza.
               </p>
-              <div className="flex gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
-                  Começar Jornada <ArrowRight className="w-4 h-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/5">
-                  Saber Mais
-                </Button>
+              <p className="hero-paragraph text-lg text-foreground/80 mb-8">
+                Além das paisagens inesquecíveis, o Jalapão e a Serra Gerais oferecem uma rica cultura regional, hospitalidade acolhedora e cenários preservados que transformam cada viagem em uma experiência memorável. Seja explorando trilhas, conhecendo os famosos fervedouros ou admirando os cânions e serras da região, cada momento revela a grandiosidade e a autenticidade de um dos lugares mais fascinantes do Brasil.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/saber-mais" className="w-full sm:w-auto">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 w-full justify-center">
+                    Saber Mais <ChevronRight className="w-4 h-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* Image - Right Side */}
-          <div className="relative hidden md:block overflow-hidden">
+          <div className="relative hidden md:block overflow-hidden rounded-[2rem] shadow-2xl shadow-slate-900/10 animate-zoom-slow">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310419663031129525/h4DPhbXPd2Ncci9CABm58V/jalapao-fervedouros-ehrkeM5rfwNDrpLFoCVwnG.webp"
-              alt=" Jalapão - Fervedouros"
+              alt="Jalapão - Fervedouros"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/20"></div>
+            <div className="absolute inset-0 bg-black/25"></div>
           </div>
         </div>
 
@@ -242,13 +241,13 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="servicos" className="py-20 md:py-32 bg-white/50">
+      <section className="py-20 md:py-32 bg-white/50">
         <div className="container">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
               O Que Oferecemos
             </h2>
-            <p className="text-lg text-foreground/60 max-w-2xl">
+            <p className="text-lg text-foreground/60 max-w-2xl mb-6">
               Serviços especializados em atividades de aventura e natureza, com foco em segurança, autenticidade e experiências inesquecíveis.
             </p>
           </div>

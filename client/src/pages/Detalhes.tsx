@@ -76,7 +76,7 @@ export default function Detalhes() {
 
     const interval = window.setInterval(() => {
       carouselApi.scrollNext();
-    }, 1800);
+    }, 2500);
 
     return () => window.clearInterval(interval);
   }, [carouselApi]);
@@ -89,7 +89,7 @@ export default function Detalhes() {
           <p className="text-foreground/70 mb-8">
             Parece que este detalhe não está disponível no momento.
           </p>
-          <Button onClick={() => navigate("/")} className="bg-primary text-primary-foreground">
+          <Button onClick={() => navigate('/home')} className="bg-primary text-primary-foreground">
             Voltar para a página inicial
           </Button>
         </div>
@@ -102,7 +102,7 @@ export default function Detalhes() {
       <div className="container py-8">
         <button
           type="button"
-          onClick={() => navigate("/")}
+          onClick={() => navigate('/home')}
           className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
         >
           <ArrowLeft className="w-4 h-4 inline-block mr-2" />

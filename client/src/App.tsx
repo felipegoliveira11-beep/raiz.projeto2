@@ -5,8 +5,10 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import FloatingButton from "./components/FloatingButton";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import Roteiro from "./pages/Roteiro";
+import SaberMais from "./pages/SaberMais";
 import Detalhes from "./pages/Detalhes";
 import { Galeria } from "./Hearder";
 
@@ -14,9 +16,11 @@ import { Galeria } from "./Hearder";
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} component={Landing} />
+      <Route path={"/home"} component={Home} />
       <Route path={"/galeria"} component={Galeria} />
       <Route path={"/roteiro"} component={Roteiro} />
+      <Route path={"/saber-mais"} component={SaberMais} />
       <Route path={"/detalhes/:id"} component={Detalhes} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

@@ -74,7 +74,7 @@ export function Galeria() {
         <h2 className="galeria-titulo">Galeria de Aventuras</h2>
         <button
           type="button"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/home')}
           className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
         >
           Voltar
