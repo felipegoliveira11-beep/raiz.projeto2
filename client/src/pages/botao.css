@@ -1,9 +1,9 @@
 #botao-voltar {
   position: fixed;     /* Faz o botão ficar fixo na tela ao rolar */
   bottom: 20px;        /* Distância do fundo da página */
-  right: 20px;         /* Distância da lateral direita */
-  background-color: #007bff; /* Cor de fundo do botão (mude como quiser) */
-  color: white;        /* Cor da setinha */
+  left: 20px;          /* Distância da lateral esquerda */
+  background-color: var(--primary); /* Cor do site */
+  color: var(--primary-foreground);        /* Cor da setinha */
   width: 50px;         /* Largura do botão */
   height: 50px;        /* Altura do botão */
   border-radius: 50%;  /* Deixa o botão redondo */
@@ -19,7 +19,7 @@
 
 /* Efeito ao passar o mouse por cima */
 #botao-voltar:hover {
-  background-color: #0056b3; 
+  background-color: rgba(0, 0, 0, 0.08);
 }
 html {
   scroll-behavior: smooth; /* Habilita a rolagem suave para âncoras */
