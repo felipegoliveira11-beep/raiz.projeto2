@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { type CarouselApi, Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ArrowLeft, Check, Mountain, Zap, Droplets, Users, Shield, Award } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLocation, useRoute } from "wouter";
+import { Link, useLocation, useRoute } from "wouter";
 
 const destinations = [
   {
@@ -100,14 +100,19 @@ export default function Detalhes() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container py-8">
-        <button
-          type="button"
-          onClick={() => navigate('/home')}
-          className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
-        >
-          <ArrowLeft className="w-4 h-4 inline-block mr-2" />
-          Voltar
-        </button>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <Link href="/home" className="inline-flex items-center">
+            <img src="/Galeria/logo.raiz.png" alt="Raiz Viva Expedições" className="h-12 w-auto" />
+          </Link>
+          <button
+            type="button"
+            onClick={() => navigate('-1')}
+            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+          >
+            <ArrowLeft className="w-4 h-4 inline-block mr-2" />
+            Voltar
+          </button>
+        </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
           {destinations.map((item) => (

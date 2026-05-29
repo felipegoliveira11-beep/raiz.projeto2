@@ -6,12 +6,17 @@ export default function SaberMais() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container py-8">
-        <Link href="/home" className="inline-block mb-8">
-          <Button className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90">
-            <ArrowLeft className="w-4 h-4 inline-block mr-2" />
-            Voltar
-          </Button>
-        </Link>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-8">
+          <Link href="/home" className="inline-flex items-center">
+            <img src="/Galeria/logo.raiz.png" alt="Raiz Viva Expedições" className="h-12 w-auto" />
+          </Link>
+          <Link href="/home" className="inline-block">
+            <Button className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90">
+              <ArrowLeft className="w-4 h-4 inline-block mr-2" />
+              Voltar
+            </Button>
+          </Link>
+        </div>
 
         <div className="rounded-[2rem] border border-primary/10 bg-white/90 p-10 shadow-2xl">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">

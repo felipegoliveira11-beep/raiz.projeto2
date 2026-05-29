@@ -99,7 +99,13 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img src= "Galeria/logo.raiz.png" alt="Raiz Viva Expedições" className="h-12 w-auto" />
+            <Link
+              href="/home"
+              className="inline-flex items-center"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              <img src="Galeria/logo.raiz.png" alt="Raiz Viva Expedições" className="h-12 w-auto" />
+            </Link>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#destinos" className="text-sm hover:text-primary transition-colors">Destinos</a>

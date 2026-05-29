@@ -1,12 +1,15 @@
 import { Check, X } from "lucide-react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export default function Roteiro() {
   const [, navigate] = useLocation();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="container py-8">
+      <div className="container py-8 flex items-center justify-between gap-4">
+        <Link href="/home" className="inline-flex items-center">
+          <img src="/Galeria/logo.raiz.png" alt="Raiz Viva Expedições" className="h-12 w-auto" />
+        </Link>
         <button
           type="button"
           onClick={() => navigate('/home')}
